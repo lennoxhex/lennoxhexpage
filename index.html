@@ -43,14 +43,15 @@
 
     <div class="contenido">
         <img src="foto.jpeg" class="foto-perfil reveal">
+
+        <h1 class="reveal" style="animation-delay: 0.15s;">LennoxHex</h1>
+        <p class="descripcion reveal" style="animation-delay: 0.2s;">Editor Ae • 4k High Quality • Soundtrack composer</p>
+
         <div class="iconos-rapidos reveal" style="animation-delay: 0.1s;">
             <a href="https://www.tiktok.com/@lennoxhex.edits" target="_blank"><img src="tiktok_icono.png" class="icono-rapido-img"></a>
             <a href="https://www.youtube.com/@lennoxhex" target="_blank"><img src="youtube_icono.png" class="icono-rapido-img"></a>
             <a href="https://open.spotify.com/intl-es/artist/53gaj4knJSgB7U8PypzmZF?si=cZEx-e08Q0GJplzZUhgrfQ" target="_blank"><img src="spotify_icono.png" class="icono-rapido-img"></a>
         </div>
-
-        <h1 class="reveal" style="animation-delay: 0.15s;">LennoxHex</h1>
-        <p class="descripcion reveal" style="animation-delay: 0.2s;">Editor Ae • 4k High Quality • Soundtrack composer</p>
 
         <div class="link-container reveal" style="animation-delay: 0.25s;">
             <a href="https://www.youtube.com/@lennoxhex" class="link-main" target="_blank"><img src="youtube.png" class="icon"> YouTube</a>
@@ -93,7 +94,6 @@
     <script>
         async function compartir(titulo, url) {
             if (navigator.share) {
-                // Si el navegador soporta el menú desplegable nativo (Móviles)
                 try {
                     await navigator.share({
                         title: titulo,
@@ -104,7 +104,6 @@
                     console.log('Error al compartir');
                 }
             } else {
-                // Si está en PC o navegador antiguo, simplemente copia el link
                 navigator.clipboard.writeText(url);
                 const t = document.getElementById('toast');
                 t.style.display = 'block';
